@@ -1,0 +1,9 @@
+---
+layout: raw
+---
+[
+  {% for author in site.author %}
+    {{ author.fullname | jsonify }}
+    {% unless forloop.last %},{% endunless %}
+  {% endfor %}
+];
